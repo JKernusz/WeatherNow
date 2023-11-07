@@ -1,20 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>WeatherNow</title>
-    <link rel="stylesheet" href="./style.css">
-    <link rel="icon" href="./favicon.ico" type="image/x-icon">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
-    <main>
-        <h1>WeatherNow</h1>  
-    </main>
-    <input id="searchBar">
-    <button class="button" id="searchButton">Search for city!</button>
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
-	<script src="assets/script.js"></script>
+    <header class="animate__fadeInDown">
+      <h1>WeatherNow</h1>
+      <span class="time-display">Time </span>
+    </header>
+    <div class="page-content">
+      <input id="searchBar" placeholder="Search for a City" />
+      <button class="glow-on-hover" type="button" id="searchButton">
+        Search
+      </button>
+      <div id="city-El"></div>
+      <div id="temp-El"></div>
+      <div id="humidity-El"></div>
+      <div id="wind-El"></div>
+      <div id="icon-El"></div>
+    </div>
+    <section>
+      <h2>Weather Forecast</h2>
+      <div id="day-1"></div>
+      <div id="day-2"></div>
+      <div id="day-3"></div>
+      <div id="day-4"></div>
+      <div id="day-5"></div>
+    </section>
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
+    <!-- use day.js to easily format dates -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/dayjs/1.10.4/dayjs.min.js"
+      integrity="sha512-0fcCRl828lBlrSCa8QJY51mtNqTcHxabaXVLPgw/jPA5Nutujh6CbTdDgRzl9aSPYW/uuE7c4SffFUQFBAy6lg=="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/dayjs/1.10.4/plugin/utc.min.js"
+      integrity="sha512-m00bfmYnAl3plEBlQfeQUhw/U2uvmw29V2+jxSWpAjankMWS+zAsjezbKWDEJNXqWq9o9qQZSOiA2RKDpa4D5w=="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/dayjs/1.10.4/plugin/timezone.min.js"
+      integrity="sha512-pslqxxHAYPCxaSeFSmXXxDkLejD5dbFVC66aiVq0z4v7VTJBU+wqcG1OpNh4p3MjS2D6NCwz/H2QmSc7dXxryg=="
+      crossorigin="anonymous"
+    ></script>
+    <script src="assets/script.js"></script>
   </body>
 </html>
